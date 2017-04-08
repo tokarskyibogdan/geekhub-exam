@@ -17,8 +17,22 @@
   background no-repeat url('http://dev-tokarskyi-geekhub-exam.pantheonsite.io/wp-content/uploads/2017/04/footer-bg.png')
   -webkit-background-size: cover
   background-size: cover
+  position: relative
   .container
     padding-bottom: 0
+    position relative
+    z-index 5
+
+  &:after
+    content ''
+    background-color: #000
+    opacity 0.6
+    position: absolute
+    top 0
+    right 0
+    left 0
+    bottom 0
+
 
 .footer-contact-title
   font-size: 36px;
@@ -31,6 +45,9 @@
   font-size: 18px;
   font-weight: 300;
   color white
+
+.footer-contact-address
+  padding-right 40%
 
 .footer-contact-phone
 .footer-contact-address

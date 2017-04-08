@@ -11,27 +11,6 @@
 </head>
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
-<header id="masthead" class="site-header" role="banner">
-    <div class="banner-wrapper">
-        <img src="http://dev-tokarskyi-geekhub-exam.pantheonsite.io/wp-content/uploads/2017/04/bannerimg.png" alt="header-banner" class="img-fluid site-header-banner">
-    </div>
-	<div class="container">
-		<div class="row">
-			<div class="site-header-inner col-sm-12">
-				<?php $header_image = get_header_image();
-				if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-				<?php } ?>
-
-			</div>
-		</div>
-	</div><!-- .container -->
-</header><!-- #masthead -->
-<div class="site-logo">
-    <img src="" alt="">
-</div>
 <nav class="site-navigation">
 	<div class="container">
 		<div class="row">
@@ -66,6 +45,12 @@
 		</div>
 	</div><!-- .container -->
 </nav><!-- .site-navigation -->
+    <header id="masthead" class="site-header" role="banner">
+        <div class="banner-wrapper">
+            <h1 class="page-main-title"><?php the_title(); ?></h1>
+            <img src="http://dev-tokarskyi-geekhub-exam.pantheonsite.io/wp-content/uploads/2017/04/bannerimg.png" alt="header-banner" class="img-fluid site-header-banner">
+        </div>
+    </header><!-- #masthead -->
 <div class="main-content">
 	<div class="container">
 		<div class="row">
