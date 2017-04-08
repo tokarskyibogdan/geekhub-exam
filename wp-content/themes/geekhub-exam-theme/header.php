@@ -12,6 +12,9 @@
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
 <header id="masthead" class="site-header" role="banner">
+    <div class="banner-wrapper">
+        <img src="http://dev-tokarskyi-geekhub-exam.pantheonsite.io/wp-content/uploads/2017/04/bannerimg.png" alt="header-banner" class="img-fluid site-header-banner">
+    </div>
 	<div class="container">
 		<div class="row">
 			<div class="site-header-inner col-sm-12">
@@ -21,18 +24,21 @@
 						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
 					</a>
 				<?php } ?>
-				<div class="site-branding">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description lead"><?php bloginfo( 'description' ); ?></p>
-				</div>
+
 			</div>
 		</div>
 	</div><!-- .container -->
 </header><!-- #masthead -->
+<div class="site-logo">
+    <img src="" alt="">
+</div>
 <nav class="site-navigation">
 	<div class="container">
 		<div class="row">
 			<div class="site-navigation-inner col-sm-12">
+                <a class="navbar-brand hidden-md hidden-sm hidden-xs" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <img src="http://dev-tokarskyi-geekhub-exam.pantheonsite.io/wp-content/uploads/2017/04/site-logo.png" width="30" height="30" alt="">
+                </a>
 				<div class="navbar navbar-default">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -41,7 +47,6 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</div>
 					<?php wp_nav_menu(
 						array(

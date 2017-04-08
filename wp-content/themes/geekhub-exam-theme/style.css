@@ -1,5 +1,5 @@
 /*
-Theme Name: blog-name_tk
+Theme Name: geekhub-exam-theme
 Theme URI: github.com/tokarskyi
 Author: Bogdan Tokarskyi
 Author URI: tokarskyi.b.com
@@ -10,6 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 body {
   word-wrap: break-word;
+  font-family: Roboto;
 }
 .alignleft {
   display: inline;
@@ -179,4 +180,193 @@ nav .form-control {
 .navbar-default {
   background-color: transparent;
   border: none;
+}
+.site-navigation {
+  padding: 0.5% 0;
+  width: 100%;
+  background-color: #2c3e50;
+  position: absolute;
+  top: 0;
+}
+.site-navigation .container {
+  padding-bottom: 0;
+}
+.banner-wrapper {
+  background-color: #000;
+  background-blend-mode: multiply;
+}
+.banner-wrapper img {
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+}
+.navbar,
+.navbar-default {
+  margin-bottom: 0;
+}
+#main-menu {
+  float: right;
+}
+#main-menu a {
+  text-transform: uppercase;
+  color: #fff;
+}
+#main-menu a:hover {
+  color: #ff4848;
+}
+#main-menu .active a {
+  color: #ff4848;
+  background-color: transparent;
+}
+.navbar-brand {
+  margin-top: 3px;
+  padding: 0;
+}
+.navbar-brand img {
+  width: 80%;
+  display: inline-block;
+}
+.widget {
+  background-color: #004966;
+  padding: 8%;
+}
+.widget-title {
+  margin: 5% 0 10% 0;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.search-form label {
+  width: 100%;
+}
+.search-form input {
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 25px 20px;
+}
+.widget_categories ul li a {
+  padding: 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+}
+.widget_categories ul li a:hover {
+  background-color: transparent;
+  color: #8b0000;
+}
+.es_caption {
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+  margin: 5% 0;
+  padding-right: 30%;
+}
+.es_lablebox {
+  display: none;
+}
+.es_textbox {
+  margin: 10% 0%;
+}
+.es_textbox input {
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+.es_button {
+  margin: 5% 0;
+}
+.es_button input {
+  width: 100%;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  background-color: #ff4848;
+}
+.es_button input:hover {
+  background-color: #ff0003;
+}
+.widget {
+  background-color: #004966;
+  padding: 8%;
+}
+.widget-title {
+  margin: 5% 0 10% 0;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.search-form label {
+  width: 100%;
+}
+.search-form input {
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 25px 20px;
+}
+.widget_categories ul li a {
+  padding: 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+}
+.widget_categories ul li a:hover {
+  background-color: transparent;
+  color: #8b0000;
+}
+.es_caption {
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+  margin: 5% 0;
+  padding-right: 30%;
+}
+.es_lablebox {
+  display: none;
+}
+.es_textbox {
+  margin: 10% 0%;
+}
+.es_textbox input {
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+.es_button {
+  margin: 5% 0;
+}
+.es_button input {
+  width: 100%;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  background-color: #ff4848;
+}
+.es_button input:hover {
+  background-color: #ff0003;
 }

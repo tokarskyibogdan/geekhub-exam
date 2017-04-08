@@ -4,9 +4,11 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content', get_post_format() ); ?>
 		<?php endwhile; ?>
-        <?php _tk_pagination(); ?>
 	<?php else : ?>
 		<?php get_template_part( 'no-results', 'index' ); ?>
 	<?php endif; ?>
+    <div class="blog-pagination">
+        <?php echo paginate_links(); ?>
+    </div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
