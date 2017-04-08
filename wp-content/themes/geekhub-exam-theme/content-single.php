@@ -3,3 +3,10 @@
         <h1 class="single-post-title"><?php the_title(); ?></h1>
         <?php the_content(); ?>
 </article><!-- #post-## -->
+<div class="post-pagination">
+    <a href="<?php echo get_permalink($prevID); ?>" class="prev">previous</a>
+    <a href="" class="next">Next</a>
+</div>
+
+
+

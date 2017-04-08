@@ -85,7 +85,7 @@ function add_clients_type()
         'new_item' => __('New Client'),
         'view_item' => __('View Client'),
         'search_items' => __('Search Clients'),
-        'not_found' =>  __('No Slides found'),
+        'not_found' =>  __('No Clients found'),
         'not_found_in_trash' => __('No Clients found in Trash'),
         'parent_item_colon' => ''
     );
