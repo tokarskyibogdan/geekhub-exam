@@ -48,7 +48,7 @@
         <header id="masthead" class="site-header" role="banner">
             <div class="banner-wrapper">
                 <h1 class="page-main-title"><?php the_title(); ?></h1>
-                <img src="<?php echo get_theme_mod('header-banner-img'); ?>" alt="header-banner" class="img-fluid site-header-banner">
+                <img src="<?php echo get_theme_mod('header-banner-img'); ?>" alt="">
             </div>
         </header><!-- #masthead -->
 <div class="main-content">

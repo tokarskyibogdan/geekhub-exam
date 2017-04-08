@@ -34,6 +34,25 @@
                 <h1><?php echo get_theme_mod('blue-section-title'); ?></h1>
                 <p><?php echo get_theme_mod('blue-section-description'); ?></p>
             </div>
+            <div class="row">
+                <?php query_posts('post_type=offers&posts_per_page=3'); ?>
+                <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
+                    <div class="col-sm-4 offer">
+                        <div class="offer-img"><?php the_post_thumbnail(); ?></div>
+                        <h3 class="offer-title"><?php the_title(); ?></h3>
+                        <p><?php the_content(); ?></p>
+                    </div>
+                <?php endwhile; endif; ?>
+                <?php wp_reset_query(); ?>
+            </div>
+        </div>
+    </section>
+    <section class="latest-works">
+        <div class="container">
+            <div class="row">
+                <h1><?php echo get_theme_mod('latest-works-title'); ?></h1>
+                <p><?php echo get_theme_mod('latest-works-description'); ?></p>
+            </div>
         </div>
     </section>
 <?php get_footer(); ?>

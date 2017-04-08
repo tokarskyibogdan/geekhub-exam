@@ -105,7 +105,7 @@ function add_clients_type()
     register_post_type('client',$args);
 }
 
-add_action('init', 'add_clients_type');
+add_action('init', 'add_offer_type');
 function add_offer_type()
 {
     $labels = array(
@@ -134,5 +134,5 @@ function add_offer_type()
         'supports' => array('title','editor','thumbnail','excerpt','custom-fields','post-formats'),
         'has_archive' => true
     );
-    register_post_type('client',$args);
+    register_post_type('offers',$args);
 }

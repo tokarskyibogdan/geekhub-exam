@@ -119,6 +119,28 @@ function _tk_customize_register( $wp_customize ) {
         'settings'   => 'blue-section-description',
     ) ) );
 
+    $wp_customize->add_setting( 'latest-works-title' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'latest-works-title', array(
+        'label'      => __( 'latest-works-title', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'latest-works-title',
+    ) ) );
+
+    $wp_customize->add_setting( 'latest-works-description' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'latest-works-description', array(
+        'label'      => __( 'latest-works-description', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'latest-works-description',
+    ) ) );
+
     $wp_customize->add_setting( 'clients-title' , array(
         'default'   => 'Contact Us',
         'transport' => 'refresh',
@@ -130,7 +152,7 @@ function _tk_customize_register( $wp_customize ) {
         'settings'   => 'clients-title',
     ) ) );
 
-    $wp_customize->add_section( 'header_banner' , array(
+    $wp_customize->add_section( 'header-banner' , array(
         'title'      => __( 'Header banner', '_tk' ),
         'priority'   => 30,
     ) );
@@ -141,7 +163,7 @@ function _tk_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header-banner-img', array(
-        'label'      => __( 'banner-img', '_tk' ),
+        'label'      => __( 'header-banner-img', '_tk' ),
         'section'    => 'header-banner',
         'settings'   => 'header-banner-img',
     ) ) );

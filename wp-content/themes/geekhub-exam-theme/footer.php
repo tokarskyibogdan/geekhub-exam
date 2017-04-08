@@ -12,7 +12,6 @@
                     <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
                         <div class="swiper-slide slide col-3">
                             <?php the_post_thumbnail(); ?>
-                            <h1><?php echo the_title();?></h1>
                         </div>
                     <?php endwhile; endif; ?>
                     <?php wp_reset_query(); ?>

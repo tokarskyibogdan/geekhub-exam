@@ -3,7 +3,7 @@
         <a href="<?php the_permalink(); ?>" rel="bookmark" class="post-link">
             <div class="feature-image">
                 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                <?php get_the_post_thumbnail();?>
+                <div class="blog-post-feature-img"><?php the_post_thumbnail(); ?></div>
             </div>
             <div class="blog-post-content">
                 <h5 class="blog-post-title"><?php the_title(); ?></h5>
