@@ -39,6 +39,7 @@ function _tk_widgets_init() {
 add_action( 'widgets_init', '_tk_widgets_init' );
 
 function _tk_scripts() {
+    wp_enqueue_style( 'swiper-slider', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css' );
     wp_enqueue_style( '_tk-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,700' );
 	wp_enqueue_style( '_tk-bootstrap-wp', THEME_DIR_URI . '/includes/css/bootstrap-wp.css' );
 	wp_enqueue_style( '_tk-bootstrap', THEME_DIR_URI . '/includes/resources/bootstrap/css/bootstrap.min.css' );
@@ -47,7 +48,8 @@ function _tk_scripts() {
 	wp_enqueue_script('_tk-bootstrapjs', THEME_DIR_URI . '/includes/resources/bootstrap/js/bootstrap.min.js', array('jquery') );
 	wp_enqueue_script( '_tk-bootstrapwp', THEME_DIR_URI . '/includes/js/bootstrap-wp.js', array('jquery') );
 	wp_enqueue_script( '_tk-skip-link-focus-fix', THEME_DIR_URI . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
-    wp_enqueue_script( 'main', THEME_DIR_URI . '/vendors/js/main.js', array(), '20130115', true );
+    wp_enqueue_script( 'swiper-slider-js', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js');
+    wp_enqueue_script( '_tk-main', THEME_DIR_URI . '/vendors/js/main.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -71,37 +73,37 @@ function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 
-//add_action('init', 'add_slides_type');
-//function add_slides_type()
-//{
-//    $labels = array(
-//        'name' => _x('Slides', 'post type general name'),
-//        'singular_name' => _x('Slide', 'post type singular name'),
-//        'add_new' => _x('Add New', 'Post'),
-//        'add_new_item' => __('Add New Slide'),
-//        'edit_item' => __('Edit Slide'),
-//        'new_item' => __('New Slide'),
-//        'view_item' => __('View Slide'),
-//        'search_items' => __('Search Slides'),
-//        'not_found' =>  __('No Slides found'),
-//        'not_found_in_trash' => __('No Slides found in Trash'),
-//        'parent_item_colon' => ''
-//    );
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'publicly_queryable' => true,
-//        'show_ui' => true,
-//        'query_var' => true,
-//        'rewrite' => true,
-//        'capability_type' => 'post',
-//        'hierarchical' => false,
-//        'menu_position' => 5,
-//        'supports' => array('title','editor','thumbnail','excerpt','custom-fields','post-formats'),
-//        'has_archive' => true
-//    );
-//    register_post_type('slides',$args);
-//}
+add_action('init', 'add_clients_type');
+function add_clients_type()
+{
+    $labels = array(
+        'name' => _x('Clients', 'post type general name'),
+        'singular_name' => _x('Client', 'post type singular name'),
+        'add_new' => _x('Add New', 'Client'),
+        'add_new_item' => __('Add New Client'),
+        'edit_item' => __('Edit Client'),
+        'new_item' => __('New Client'),
+        'view_item' => __('View Client'),
+        'search_items' => __('Search Clients'),
+        'not_found' =>  __('No Slides found'),
+        'not_found_in_trash' => __('No Clients found in Trash'),
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','editor','thumbnail','excerpt','custom-fields','post-formats'),
+        'has_archive' => true
+    );
+    register_post_type('client',$args);
+}
 
 // Register custom category widget
 //function custom_category_widgets_init() {

@@ -36,8 +36,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="site-navigation-inner col-sm-12">
-                <a class="navbar-brand hidden-md hidden-sm hidden-xs" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <img src="http://dev-tokarskyi-geekhub-exam.pantheonsite.io/wp-content/uploads/2017/04/site-logo.png" width="30" height="30" alt="">
+                <a href="<?php get_site_url(); ?>" class="navbar-brand hidden-md hidden-sm hidden-xs">
+                    <img src="<?php echo get_theme_mod('site-logo'); ?>" alt="site-logo">
                 </a>
 				<div class="navbar navbar-default">
 					<div class="navbar-header">
