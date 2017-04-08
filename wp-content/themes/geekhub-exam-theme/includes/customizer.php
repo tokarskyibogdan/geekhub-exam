@@ -4,20 +4,146 @@ function _tk_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+    $wp_customize->add_section( 'front-page' , array(
+        'title'      => __( 'Front Page', '_tk' ),
+        'priority'   => 30,
+    ) );
+
+    $wp_customize->add_setting( 'front-page-red-section-title' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'front-page-red-section-title', array(
+        'label'      => __( 'front page red section title', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'front-page-red-section-title',
+    ) ) );
+
+    $wp_customize->add_setting( 'front-page-red-section-subtitle' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'front-page-red-section-subtitle', array(
+        'label'      => __( 'front page red section subtitle', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'front-page-red-section-subtitle',
+    ) ) );
+
+    $wp_customize->add_setting( 'front-page-red-section-stats' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'front-page-red-section-stats', array(
+        'label'      => __( 'front-page-red-section-stats', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'front-page-red-section-stats',
+    ) ) );
+
+    $wp_customize->add_setting( 'front-page-red-section-description' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'front-page-red-section-description', array(
+        'label'      => __( 'front-page-red-section-description', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'front-page-red-section-description',
+    ) ) );
+
+    $wp_customize->add_setting( 'red-section-img' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'red-section-img', array(
+        'label'      => __( 'red-section-img', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'red-section-img',
+    ) ) );
+
+    $wp_customize->add_setting( 'white-section-img' , array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'white-section-img', array(
+        'label'      => __( 'white-section-img', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'white-section-img',
+    ) ) );
+
+    $wp_customize->add_setting( 'white-section-title' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'white-section-title', array(
+        'label'      => __( 'white-section-title', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'white-section-title',
+    ) ) );
+
+    $wp_customize->add_setting( 'white-section-description' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'white-section-description', array(
+        'label'      => __( 'white-section-description', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'white-section-description',
+    ) ) );
+
+    $wp_customize->add_setting( 'blue-section-title' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'blue-section-title', array(
+        'label'      => __( 'blue-section-title', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'blue-section-title',
+    ) ) );
+
+    $wp_customize->add_setting( 'blue-section-description' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'blue-section-description', array(
+        'label'      => __( 'blue-section-description', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'blue-section-description',
+    ) ) );
+
+    $wp_customize->add_setting( 'clients-title' , array(
+        'default'   => 'Contact Us',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'clients-title', array(
+        'label'      => __( 'clients-title', '_tk' ),
+        'section'    => 'front-page',
+        'settings'   => 'clients-title',
+    ) ) );
+
     $wp_customize->add_section( 'header_banner' , array(
         'title'      => __( 'Header banner', '_tk' ),
         'priority'   => 30,
     ) );
 
-    $wp_customize->add_setting( 'header_banner_settings' , array(
+    $wp_customize->add_setting( 'header-banner-img' , array(
         'default'   => '',
         'transport' => 'refresh',
     ) );
 
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header_banner_control', array(
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'header-banner-img', array(
         'label'      => __( 'banner-img', '_tk' ),
-        'section'    => 'header_banner',
-        'settings'   => 'header_banner_settings',
+        'section'    => 'header-banner',
+        'settings'   => 'header-banner-img',
     ) ) );
 
     $wp_customize->add_section( 'site-main' , array(

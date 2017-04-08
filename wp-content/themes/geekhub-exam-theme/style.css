@@ -341,6 +341,21 @@ nav .form-control {
 .wpcf7 input[type='submit']:hover {
   background-color: #ff8c68;
 }
+.sub-footer {
+  color: #fff;
+  padding-top: 1%;
+  background-color: #ff4848;
+}
+.sub-footer-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 300;
+  color: #fff;
+}
+.swiper-slide,
+.slide {
+  text-align: center;
+}
 .widget {
   background-color: #004966;
   padding: 8%;
@@ -535,4 +550,48 @@ nav .form-control {
 }
 .post-pagination .next {
   float: right;
+}
+.red-section {
+  background-color: #ff4848;
+  padding: 5% 0 10% 0;
+  color: #fff;
+}
+.pl-0 {
+  padding-left: 0;
+}
+.pr-0 {
+  padding-right: 0;
+}
+.white-section {
+  padding-top: 5%;
+}
+.white-section h1 {
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #004966;
+}
+.white-section p {
+  color: #004966;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.blue-section {
+  background-color: #004966;
+  text-align: center;
+  color: #fff;
+}
+.blue-section h1 {
+  font-size: 36px;
+  font-weight: 300;
+}
+.blue-section p {
+  padding: 0px 20%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.main-content-inner {
+  padding-bottom: 0;
 }

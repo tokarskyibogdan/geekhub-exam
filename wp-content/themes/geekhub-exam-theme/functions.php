@@ -105,69 +105,34 @@ function add_clients_type()
     register_post_type('client',$args);
 }
 
-// Register custom category widget
-//function custom_category_widgets_init() {
-//    register_widget( 'WP_Widget_Categories_custom' );
-//}
-//add_action( 'widgets_init', 'custom_category_widgets_init' );
-//class WP_Widget_Categories_Custom extends WP_Widget {
-//    function __construct()
-//    {
-//        $widget_ops = array( 'classname' => 'widget_categories widget_categories_custom', 'description' => __( "A list of categories, with slightly tweaked output.", 'mytextdomain'  ) );
-//        parent::__construct( 'categories_custom', __( 'Categories Custom', 'mytextdomain' ), $widget_ops );
-//    }
-//    function widget( $args, $instance )
-//    {
-//        extract( $args );
-//        $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Categories Custom', 'mytextdomain'  ) : $instance['title'], $instance, $this->id_base);
-//        echo $before_widget;
-//        if ( $title )
-//            echo $before_title . $title . $after_title;
-//        ?>
-<!--        <ul>-->
-<!--            --><?php
-//            $pattern = '#<li([^>]*)><a([^>]*)>(.*?)<\/a>\s*\(([0-9]*)\)\s*<\/li>#i';
-//            $replacement = '<li$1><a$2><span class="cat-name">$3</span> <span class="cat-count">($4)</span></a>';
-//            $args = array(
-//                'orderby'       => 'name',
-//                'order'         => 'ASC',
-//                'show_count'    => 1,
-//                'title_li'      => '',
-//                'exclude'       => '2,5,31',
-//                'echo'          => 0,
-//                'depth'         => 1,
-//            );
-//            $subject      = wp_list_categories( $args );
-//            echo preg_replace( $pattern, $replacement, $subject );
-//            ?>
-<!--        </ul>-->
-<!--        --><?php
-//        echo $after_widget;
-//    }
-//    function update( $new_instance, $old_instance )
-//    {
-//        $instance = $old_instance;
-//        $instance['title'] = strip_tags( $new_instance['title'] );
-//        $instance['count'] = 1;
-//        $instance['hierarchical'] = 0;
-//        $instance['dropdown'] = 0;
-//        return $instance;
-//    }
-//    function form( $instance )
-//    {
-//        $instance = wp_parse_args( (array) $instance, array( 'title' => '') );
-//        $title = esc_attr( $instance['title'] );
-//        $count = true;
-//        $hierarchical = false;
-//        $dropdown = false;
-//        ?>
-<!--        <p>-->
-<!--            <label for="--><?php //echo $this->get_field_id('title', 'mytextdomain' ); ?><!--">--><?php //_e( 'Title:', 'mytextdomain'  ); ?><!--</label>-->
-<!--            <input class="widefat" id="--><?php //echo $this->get_field_id('title'); ?><!--" name="--><?php //echo $this->get_field_name('title'); ?><!--" type="text" value="--><?php //echo $title; ?><!--" />-->
-<!--        </p>-->
-<!--        <input type="checkbox" class="checkbox" id="--><?php //echo $this->get_field_id('count'); ?><!--" name="--><?php //echo $this->get_field_name('count'); ?><!--" --><?php //checked( $count ); ?><!-- disabled="disabled" />-->
-<!--        <label for="--><?php //echo $this->get_field_id('count'); ?><!--">--><?php //_e( 'Show post counts', 'mytextdomain'  ); ?><!--</label>-->
-<!--        <br />-->
-<!--        --><?php
-//    }
-//}
+add_action('init', 'add_clients_type');
+function add_offer_type()
+{
+    $labels = array(
+        'name' => _x('Offers', 'post type general name'),
+        'singular_name' => _x('Offer', 'post type singular name'),
+        'add_new' => _x('Add New', 'Offer'),
+        'add_new_item' => __('Add New Offer'),
+        'edit_item' => __('Edit Offer'),
+        'new_item' => __('New Offer'),
+        'view_item' => __('View Offer'),
+        'search_items' => __('Search Offers'),
+        'not_found' =>  __('No Offers found'),
+        'not_found_in_trash' => __('No Offers found in Trash'),
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','editor','thumbnail','excerpt','custom-fields','post-formats'),
+        'has_archive' => true
+    );
+    register_post_type('client',$args);
+}

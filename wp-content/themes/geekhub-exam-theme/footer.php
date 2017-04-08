@@ -3,13 +3,14 @@
 	</div><!-- close .container -->
 </div><!-- close .main-content -->
 <div class="sub-footer">
+    <h2 class="sub-footer-title"><?php echo get_theme_mod('clients-title'); ?></h2>
     <div class="container">
         <div class="row">
             <div class="swiper-container">
                 <div class="swiper-wrapper slider">
-                    <?php query_posts('post_type=clients'); ?>
+                    <?php query_posts('post_type=client&posts_per_page=10'); ?>
                     <?php if(have_posts()) : while (have_posts() ) : the_post(); ?>
-                        <div class="swiper-slide slide">
+                        <div class="swiper-slide slide col-3">
                             <?php the_post_thumbnail(); ?>
                             <h1><?php echo the_title();?></h1>
                         </div>
@@ -52,16 +53,30 @@
 </footer><!-- close #colophon -->
 
 <?php wp_footer(); ?>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        effect: '<?php echo get_theme_mod('slider-effect')?>',
-        paginationBulletRender: function (swiper, index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-        }
-    });
-</script>
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 40
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 30
+                        },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        }
+                    }
+                });
+            </script>
 </body>
 </html>
 
